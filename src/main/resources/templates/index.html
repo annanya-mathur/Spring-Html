@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Interactive Form</title>
+</head>
+<body style="background-color:#00ff7f" />
+<h1>Welcome to Spring boot application!</h1>
+<form th:action="@{/success}" th:object="${name}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" th:field="*{name}" />
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
+
